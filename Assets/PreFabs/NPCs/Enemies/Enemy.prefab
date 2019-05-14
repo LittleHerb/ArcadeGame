@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4407052654169785597}
   - component: {fileID: 4407052654169785594}
   - component: {fileID: 4407052654169785599}
+  - component: {fileID: 9180773595444319068}
   - component: {fileID: 4407052654169785598}
   m_Layer: 0
   m_Name: Enemy
@@ -111,6 +112,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
+--- !u!114 &9180773595444319068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4407052654169785595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7b88cbdc8317848a9323850f9f6cc2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathPoint: {fileID: 0}
 --- !u!61 &4407052654169785598
 BoxCollider2D:
   m_ObjectHideFlags: 0
