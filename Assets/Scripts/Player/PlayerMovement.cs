@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     public float runSpeed = 40f;
     public float mouseSpeed = 10f;
+    public GameObject crossHair;
+
+    private PlayerMovement player;
 
     float horizontalMove = 0f;
     bool Jump = false;
@@ -39,6 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         }
 
+        MoveCrossHair();
 
     }
 
@@ -60,4 +64,6 @@ public class PlayerMovement : MonoBehaviour
         transform.position = Vector2.MoveTowards(transform.position, mousePos, mouseSpeed * Time.deltaTime);
 
     }
+
+
 }
