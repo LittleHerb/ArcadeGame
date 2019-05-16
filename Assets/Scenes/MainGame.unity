@@ -2349,6 +2349,11 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
       value: 0.25086424
       objectReference: {fileID: 0}
+    - target: {fileID: 2897962353947635533, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
 --- !u!120 &5443095825063589483 stripped
