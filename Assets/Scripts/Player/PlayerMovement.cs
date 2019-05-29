@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float runSpeed = 40f;
     public float mouseSpeed = 10f;
-    public GameObject crossHair;
+	public float timerCountUpModifier = 0.5f;
 
     private PlayerMovement player;
 
@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rigid;
 	
 	bool flying = false;
-
+	public float timer, maxTime;
     private void Start()
     {
         rigid = this.GetComponent<Rigidbody2D>();
@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
 
         else
         {
+			timer = 0;
 			flying = false;
             rigid.bodyType = RigidbodyType2D.Dynamic;
         }
@@ -58,13 +59,29 @@ public class PlayerMovement : MonoBehaviour
 
     void MouseFollow()
     {
-        rigid.bodyType = RigidbodyType2D.Static;
+		timer += Time.deltaTime;
+		if(timer <= maxTime)
+		{
+			
+			rigid.bodyType = RigidbodyType2D.Static;
 
-        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //USELESS//		Vector3 direction = mousePos - transform.position;		//USELESS//
-        //USELESS//		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;		//USELESS//
-        //USELESS//		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);		//USELESS//
-        transform.position = Vector2.MoveTowards(transform.position, mousePos, mouseSpeed * Time.deltaTime);
+			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+			//USELESS//		Vector3 direction = mousePos - transform.position;		//USELESS//
+			//USELESS//		float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;		//USELESS//
+			//USELESS//		transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);		//USELESS//
+			transform.position = Vector2.MoveTowards(transform.position, mousePos, mouseSpeed * Time.deltaTime);
+		}
+		else
+		{
+			flying = false;
+            rigid.bodyType = RigidbodyType2D.Dynamic;
+			
+			if(timer >= 0f)
+			{
+				timer -= (Time.deltaTime * timerCountUpModifier);
+				
+			}
+		}
 
     }
 

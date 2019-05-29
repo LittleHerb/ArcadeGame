@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyDeath : MonoBehaviour
+public class EnemyKill : MonoBehaviour
 {
-    public Transform deathPoint;
-    public GameObject player;
-    //public GameObject enemy;
+    public GameObject Enemy;
+	
     void Start()
     {
         
@@ -20,7 +19,7 @@ public class EnemyDeath : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.name == "player")
+        if (col.transform.CompareTag("Enemy"))
         {
             Destroy(col.gameObject);
         }  

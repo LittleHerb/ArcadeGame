@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1177293974}
   - component: {fileID: 1177293975}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: DeathPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,7 +67,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7163159497377059981}
   - component: {fileID: 5443095825063589483}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: LineOfSight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2897962353947635533}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.2978983, y: 0.06341092, z: -0.058846038}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 1.4053578, z: 2}
   m_Children: []
   m_Father: {fileID: 4407052654169785596}
@@ -126,8 +126,8 @@ LineRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Positions:
-  - {x: 10, y: 0, z: 0}
-  - {x: 5, y: 0, z: 1}
+  - {x: 5, y: 0, z: 0}
+  - {x: 10, y: 0, z: 1}
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -135,8 +135,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.024055481
-        value: 0.9285755
+        time: 0.061855316
+        value: 0.15078735
         inSlope: Infinity
         outSlope: Infinity
         tangentMode: 0
@@ -144,8 +144,8 @@ LineRenderer:
         inWeight: 0.33333334
         outWeight: 0
       - serializedVersion: 3
-        time: 0.2233679
-        value: 0.18253219
+        time: 0.25086424
+        value: 0.8888893
         inSlope: -2.9767196
         outSlope: -2.9767196
         tangentMode: 0
@@ -203,12 +203,10 @@ GameObject:
   - component: {fileID: 4407052654169785596}
   - component: {fileID: 4407052654169785597}
   - component: {fileID: 4407052654169785594}
-  - component: {fileID: 4407052654169785599}
-  - component: {fileID: 9180773595444319068}
   - component: {fileID: 4407052654169785598}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -291,37 +289,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  distance: 1
+  distance: 0.5
   detectDistance: 3
   groundDetection: {fileID: 4407052654789667790}
+  lineOfSight: {fileID: 5443095825063589483}
   spawnPoint: {fileID: 0}
---- !u!114 &4407052654169785599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4407052654169785595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4c52d1ce2933134494278f8770b5f38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  spawnPoint: {fileID: 0}
---- !u!114 &9180773595444319068
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4407052654169785595}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b7b88cbdc8317848a9323850f9f6cc2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathPoint: {fileID: 1177293974}
-  player: {fileID: 0}
 --- !u!61 &4407052654169785598
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -335,7 +307,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.040841103, y: -0.55906737}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -346,7 +318,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.6262302, y: 0.51104206}
   m_EdgeRadius: 0
 --- !u!1 &4407052654789667791
 GameObject:
@@ -357,7 +329,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4407052654789667790}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: groundDetection
   m_TagString: Untagged
   m_Icon: {fileID: 10300, guid: 0000000000000000f000000000000000, type: 0}
