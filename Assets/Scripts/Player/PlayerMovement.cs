@@ -63,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
 		if(timer <= maxTime)
 		{
 			
-			rigid.bodyType = RigidbodyType2D.Static;
+			rigid.bodyType = RigidbodyType2D.Kinematic;
+            rigid.velocity = Vector2.zero;
 
 			Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			//USELESS//		Vector3 direction = mousePos - transform.position;		//USELESS//
