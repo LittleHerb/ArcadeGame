@@ -5,6 +5,7 @@ using UnityEngine;
 public class ImpassableWall : MonoBehaviour
 {
     Rigidbody2D rigid;
+
     void Start()
     {
         rigid = this.GetComponent<Rigidbody2D>();    

@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 89311242}
   m_Layer: 0
   m_Name: GameMaster
-  m_TagString: Untagged
+  m_TagString: GM
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -806,6 +806,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: lineOfSight
+      value: 
+      objectReference: {fileID: 1574620983}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: distance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: wallDetection
+      value: 
+      objectReference: {fileID: 713928767}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: groundDetection
+      value: 
+      objectReference: {fileID: 713928767}
     - target: {fileID: 5443095825063589483, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -836,41 +861,6 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
       value: 0.25086424
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1541009507}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: lineOfSight
-      value: 
-      objectReference: {fileID: 1574620983}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: distance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: wallDetection
-      value: 
-      objectReference: {fileID: 713928767}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: groundDetection
-      value: 
-      objectReference: {fileID: 713928767}
     - target: {fileID: 7163159497377059981, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -886,6 +876,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2897962353947635533, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_IsActive
@@ -896,15 +895,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1541009507}
     m_RemovedComponents:
     - {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
@@ -1310,6 +1310,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: lineOfSight
+      value: 
+      objectReference: {fileID: 1319187219}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: distance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: wallDetection
+      value: 
+      objectReference: {fileID: 1553093575}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: groundDetection
+      value: 
+      objectReference: {fileID: 1553093575}
     - target: {fileID: 5443095825063589483, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -1340,41 +1365,6 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
       value: 0.25086424
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1541009507}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: lineOfSight
-      value: 
-      objectReference: {fileID: 1319187219}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: distance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: wallDetection
-      value: 
-      objectReference: {fileID: 1553093575}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: groundDetection
-      value: 
-      objectReference: {fileID: 1553093575}
     - target: {fileID: 7163159497377059981, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1390,6 +1380,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2897962353947635533, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_IsActive
@@ -1400,15 +1399,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1541009507}
     m_RemovedComponents:
     - {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
@@ -2080,6 +2080,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: lineOfSight
+      value: 
+      objectReference: {fileID: 433827392}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: distance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: wallDetection
+      value: 
+      objectReference: {fileID: 1155387999}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: groundDetection
+      value: 
+      objectReference: {fileID: 1155387999}
     - target: {fileID: 5443095825063589483, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -2110,41 +2135,6 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
       value: 0.25086424
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1541009507}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: lineOfSight
-      value: 
-      objectReference: {fileID: 433827392}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: distance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: wallDetection
-      value: 
-      objectReference: {fileID: 1155387999}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: groundDetection
-      value: 
-      objectReference: {fileID: 1155387999}
     - target: {fileID: 7163159497377059981, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2160,6 +2150,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2897962353947635533, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_IsActive
@@ -2170,15 +2169,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1541009507}
     m_RemovedComponents:
     - {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
@@ -2254,6 +2254,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: lineOfSight
+      value: 
+      objectReference: {fileID: 1856087935}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: distance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: wallDetection
+      value: 
+      objectReference: {fileID: 1876513380}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: groundDetection
+      value: 
+      objectReference: {fileID: 1876513380}
     - target: {fileID: 5443095825063589483, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -2284,41 +2309,6 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
       value: 0.25086424
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1541009507}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: lineOfSight
-      value: 
-      objectReference: {fileID: 1856087935}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: distance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: wallDetection
-      value: 
-      objectReference: {fileID: 1876513380}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: groundDetection
-      value: 
-      objectReference: {fileID: 1876513380}
     - target: {fileID: 7163159497377059981, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2334,6 +2324,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2897962353947635533, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_IsActive
@@ -2344,15 +2343,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1541009507}
     m_RemovedComponents:
     - {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
@@ -2735,12 +2735,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1496550080}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.050854, y: -2.2521489, z: -0.13193884}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 11.895111, y: -1.9971703, z: -0.3389701}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_Father: {fileID: 1581333494}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1512007439
 PrefabInstance:
@@ -2937,6 +2937,31 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: lineOfSight
+      value: 
+      objectReference: {fileID: 269230089}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: distance
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: wallDetection
+      value: 
+      objectReference: {fileID: 1294448888}
+    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: groundDetection
+      value: 
+      objectReference: {fileID: 1294448888}
     - target: {fileID: 5443095825063589483, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_Positions.Array.data[0].x
@@ -2967,41 +2992,6 @@ PrefabInstance:
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[1].time
       value: 0.25086424
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 1541009507}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: spawnPoint
-      value: 
-      objectReference: {fileID: 1920487225}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: lineOfSight
-      value: 
-      objectReference: {fileID: 269230089}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: distance
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: wallDetection
-      value: 
-      objectReference: {fileID: 1294448888}
-    - target: {fileID: 4407052654169785594, guid: 305afc4125586eb46bf8bed878e3c003,
-        type: 3}
-      propertyPath: groundDetection
-      value: 
-      objectReference: {fileID: 1294448888}
     - target: {fileID: 7163159497377059981, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3017,6 +3007,15 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2897962353947635533, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
       propertyPath: m_IsActive
@@ -3027,15 +3026,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 4407052654789667791, guid: 305afc4125586eb46bf8bed878e3c003,
+    - target: {fileID: 4407052654169785599, guid: 305afc4125586eb46bf8bed878e3c003,
         type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1177293973, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
-      propertyPath: m_Layer
-      value: 2
-      objectReference: {fileID: 0}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 1920487225}
+    - target: {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1541009507}
     m_RemovedComponents:
     - {fileID: 9180773595444319068, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 305afc4125586eb46bf8bed878e3c003, type: 3}
@@ -3083,6 +3083,7 @@ Transform:
   - {fileID: 125578962}
   - {fileID: 1802259815}
   - {fileID: 89311242}
+  - {fileID: 1496550082}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

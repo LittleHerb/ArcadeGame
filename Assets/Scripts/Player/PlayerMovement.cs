@@ -1,10 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     #region Variables
+    //private GameMaster gm;
+
     public CharacterController2D controller;
 
     #region GroundedCheck
@@ -61,6 +64,7 @@ public class PlayerMovement : MonoBehaviour
     #endregion
     private void Start()
     {
+        //gm = GameObject.FindGameObjectWithTag("GM").GetComponent<GameMaster>();
         rigid = this.GetComponent<Rigidbody2D>();
     }
 
