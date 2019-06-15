@@ -208,9 +208,9 @@ TextureImporter:
       name: Updated Shadows_5
       rect:
         serializedVersion: 2
-        x: 992
+        x: 993
         y: 496
-        width: 248
+        width: 246
         height: 248
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -448,9 +448,9 @@ TextureImporter:
       name: Updated Shadows_17
       rect:
         serializedVersion: 2
-        x: 992
+        x: 993
         y: 0
-        width: 248
+        width: 246
         height: 248
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
