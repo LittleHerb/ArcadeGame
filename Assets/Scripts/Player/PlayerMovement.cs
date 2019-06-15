@@ -33,7 +33,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerMovement player;
 
     float horizontalMove = 0f;
-    bool Jump = false;
+    bool jump = false;
+    bool crouch = false;
     Rigidbody2D rigid;
 
     bool flying = false;
@@ -87,7 +88,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
-            Jump = true;
+            jump = true;
+        }
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
         }
 
         if (Input.GetButton("Fire1"))
@@ -109,8 +119,8 @@ public class PlayerMovement : MonoBehaviour
 
         //Move our Character and move the same amount regardless of the amount of times called
         if (!flying)
-            controller.Move(horizontalMove * Time.fixedDeltaTime, false, Jump);
-        Jump = false;
+            controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        jump = false;
     }
 
     void MouseFollow()
