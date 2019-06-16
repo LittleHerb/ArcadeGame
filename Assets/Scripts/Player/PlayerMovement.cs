@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     //private GameMaster gm;
 
     public CharacterController2D controller;
+    public Animator anim;
 
     #region GroundedCheck
     // For overlap circle to check if player is grounded
@@ -85,10 +86,12 @@ public class PlayerMovement : MonoBehaviour
 
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
+            anim.SetBool("IsJumping", true);
         }
 
         if (Input.GetButtonDown("Crouch"))
@@ -112,6 +115,17 @@ public class PlayerMovement : MonoBehaviour
             flying = false;
             rigid.bodyType = RigidbodyType2D.Dynamic;
         }
+    }
+
+    public void OnLanding()
+    {
+        anim.SetBool("IsJumping", false);
+    }
+
+    public void OnCrouching(bool isCrouching)
+    {
+        anim.SetBool("IsCrouching", isCrouching);
+
     }
 
     private void FixedUpdate()
