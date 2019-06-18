@@ -51,7 +51,7 @@ public class Patrol : MonoBehaviour
 			Debug.DrawLine(transform.position, transform.position + transform.right * detectDistance, Color.green);
 			lineOfSight.SetPosition(1, transform.position + transform.right * detectDistance);
 		}
-		    
+		
 		lineOfSight.SetPosition(0, transform.position);
 		
 		
