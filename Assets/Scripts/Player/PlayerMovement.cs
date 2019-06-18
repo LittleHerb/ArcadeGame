@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     //private GameMaster gm;
 
     public CharacterController2D controller;
+    public Animator anim;
 
     #region GroundedCheck
     // For overlap circle to check if player is grounded
@@ -33,7 +34,8 @@ public class PlayerMovement : MonoBehaviour
     private PlayerMovement player;
 
     float horizontalMove = 0f;
-    bool Jump = false;
+    bool jump = false;
+    bool crouch = false;
     Rigidbody2D rigid;
 
     bool flying = false;
@@ -70,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+		
         IsGrounded();
 
         if (grounded)
@@ -84,10 +87,23 @@ public class PlayerMovement : MonoBehaviour
 
 
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
+        anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
+        //if (Input.GetButtonDown("Jump"))
+		if (Input.GetKeyDown(KeyCode.Space))
         {
-            Jump = true;
+			Debug.Log("starling");
+            jump = true;
+            anim.SetBool("IsJumping", true);
+        }
+
+        if (Input.GetButtonDown("Crouch"))
+        {
+            crouch = true;
+        }
+        else if (Input.GetButtonUp("Crouch"))
+        {
+            crouch = false;
         }
 
         if (Input.GetButton("Fire1"))
@@ -104,13 +120,24 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void OnLanding()
+    {
+        anim.SetBool("IsJumping", false);
+    }
+
+    public void OnCrouching(bool isCrouching)
+    {
+        anim.SetBool("IsCrouching", isCrouching);
+
+    }
+
     private void FixedUpdate()
     {
 
         //Move our Character and move the same amount regardless of the amount of times called
         if (!flying)
-            controller.Move(horizontalMove * Time.fixedDeltaTime, false, Jump);
-        Jump = false;
+            controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
+        jump = false;
     }
 
     void MouseFollow()
