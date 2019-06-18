@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainGame.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Level Layouts/Final Main Menu.unity
+    guid: bb60f9ae8a04e59408ef4b80965c319e
+  - enabled: 1
+    path: Assets/Scenes/Level Layouts/Part 1 - Entering the Facility.unity
+    guid: 6e5137460aab9744cb593b213230c7b9
+  - enabled: 1
+    path: Assets/Scenes/Level Layouts/Part 2 - Escaping with Powers.unity
+    guid: bdffbd13b01e07c4faf8934bba8fc0c7
   m_configObjects: {}

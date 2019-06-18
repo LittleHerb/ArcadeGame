@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+		
         IsGrounded();
 
         if (grounded)
@@ -88,8 +89,10 @@ public class PlayerMovement : MonoBehaviour
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
         anim.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButtonDown("Jump"))
+        //if (Input.GetButtonDown("Jump"))
+		if (Input.GetKeyDown(KeyCode.Space))
         {
+			Debug.Log("starling");
             jump = true;
             anim.SetBool("IsJumping", true);
         }
