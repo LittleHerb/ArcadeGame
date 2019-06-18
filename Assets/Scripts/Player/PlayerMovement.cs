@@ -9,8 +9,8 @@ public class PlayerMovement : MonoBehaviour
     //private GameMaster gm;
 
     public CharacterController2D controller;
-    public Animator anim;
-
+    public Animator anim, caught;
+    
     #region GroundedCheck
     // For overlap circle to check if player is grounded
     /*public var top_left = Transform; // Overlap uses positions to make a rectangle, needs two points to make
@@ -171,5 +171,8 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    public void Caught()
+    {
+        caught.SetTrigger("IsCaught");
+    }
 }

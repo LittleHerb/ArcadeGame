@@ -501,6 +501,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 114127252815005694}
   anim: {fileID: 917438058}
+  caught: {fileID: 1605532379}
   topLeft: {fileID: 641779291}
   bottomRight: {fileID: 666591145}
   groundLayers:
@@ -511,7 +512,7 @@ MonoBehaviour:
   mouseSpeed: 10
   groundDistance: 0
   groundedTime: 0.2
-  canPhase: 1
+  canPhase: 0
   timer: 0
   maxTime: 1.5
   phaseTimeAllowedNotGrounded: 0.5
@@ -691,7 +692,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2249974748947774402
 RectTransform:
   m_ObjectHideFlags: 0
@@ -809,7 +810,7 @@ GameObject:
   - component: {fileID: 9058897123922778534}
   - component: {fileID: 981919135888236875}
   - component: {fileID: 3235315203632950938}
-  - component: {fileID: 5046969196900844173}
+  - component: {fileID: 1605532379}
   m_Layer: 8
   m_Name: Caught
   m_TagString: Untagged
@@ -901,7 +902,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!95 &5046969196900844173
+--- !u!95 &1605532379
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0

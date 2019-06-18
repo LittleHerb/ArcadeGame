@@ -10,13 +10,10 @@ public class StationaryEnemyPatrol : MonoBehaviour
 
     public LineRenderer lineOfSight;
     public bool lookingRight = true;
-    [SerializeField] Transform spawnPoint;
-
 
     void Start()
     {
         Physics2D.queriesStartInColliders = false;
-
     }
 
     void Update()
@@ -28,14 +25,20 @@ public class StationaryEnemyPatrol : MonoBehaviour
 		{
 			Debug.DrawLine(transform.position, hitInfo.point, Color.red);
 			lineOfSight.SetPosition(1, hitInfo.point);
-			
-			if(hitInfo.collider.CompareTag("Player"))
-			{
-				//Destroy(hitInfo.collider.gameObject);
-				hitInfo.transform.position = spawnPoint.position;
 
-				
-			}
+            PlayerMovement player = hitInfo.collider.GetComponent<PlayerMovement>();
+            if (player)
+            {
+                player.Caught();
+            }
+
+			//if(hitInfo.collider.CompareTag("Player"))
+			//{
+            //    //Destroy(hitInfo.collider.gameObject);
+            //    //hitInfo.transform.position = spawnPoint.position;
+            //
+            //
+            //}
 			
 		}
 		
